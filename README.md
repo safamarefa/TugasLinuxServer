@@ -13,6 +13,8 @@ SSH atau Secure Shell adalah protokol jaringan yang menjamin keamanan koneksi an
 
 # Pembahasan
 
-1. 
+### 1. Untuk memeriksa alamat IP server host, gunakan perintah *$ifconfig.*
+
+
 
 
