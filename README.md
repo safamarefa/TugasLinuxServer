@@ -27,6 +27,40 @@ SSH atau Secure Shell adalah protokol jaringan yang menjamin keamanan koneksi an
 
 ### 4. lalu lakukan konfigurasi port 40 ke host server, untuk memodifikasi lebih luas dapat menggunakan cmd *$sudo su* untuk masuk ke super user mode
 
+### 5. modifikasi file *ssh_config* untuk mencegah terjadinya file yang rusak, kita bisa terlebih dahulu menyalin file *ssh_config* dengan menggunakan command:
+
+*$ cp /etc/ssh/ssh_config /etc/ssh/ssh_config.backup*
+
+*$ nano /etc/ssh_config*
+
+saat membuka file *ssh_config* menggunakan cmd nano, kita ubah config dengan mengubah baris yang ada unsur port 22: Protocol 2 & Port 40
+
+![Screenshot (448)](https://github.com/user-attachments/assets/6d685960-4823-4587-9adc-3153a8dd8316)
+
+### 6. untuk mengaktifkan cmd yang sudah kita lakukan, kita dapat menggunakan cmd:
+
+*$ ufw allow 40/tcp*
+
+*$ ufw enable*
+
+*$ ufw status*
+
+![Screenshot (451)](https://github.com/user-attachments/assets/865cc8c8-ea51-4943-af32-e47c9cf5e6b7)
+
+![Screenshot (453)](https://github.com/user-attachments/assets/79b6ac3f-4257-43da-a5c8-7dec79d0b48f)
+
+### 7. setelah dilakukannya config, untuk menghubungkan koneksi dapat menggunakan cmd:
+
+*$ ssh -p 40 usernameHost@IPAdress*
+
+![Screenshot (454)](https://github.com/user-attachments/assets/0fb6b0af-61aa-4e1a-909b-333a10fa0723)
+
+
+
+
+
+
+
 
 
 
